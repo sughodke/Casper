@@ -30,6 +30,7 @@
             <div class="site-footer-content inner">
                 <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
                 <nav class="site-footer-nav">
+                    <a href="mailto:hello@alohamd.net" rel="noopener">hello@alohamd.net</a>
                     <a href="{{@blog.url}}">Latest Posts</a>
                     {{#if @blog.facebook}}<a href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener">Facebook</a>{{/if}}
                     {{#if @blog.twitter}}<a href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
@@ -48,8 +49,8 @@
             {{#if @blog.logo}}
                 <img class="subscribe-overlay-logo" src="{{@blog.logo}}" alt="{{@blog.title}}" />
             {{/if}}
-            <h1 class="subscribe-overlay-title">Subscribe to {{@blog.title}}</h1>
-            <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
+            <h1 class="subscribe-overlay-title">Let us call you</h1>
+            <p class="subscribe-overlay-description">Got a question? Get a free consultation from a Machine Learning expert today</p>
             {{subscribe_form placeholder="youremail@example.com"}}
         </div>
     </div>
