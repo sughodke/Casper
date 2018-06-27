@@ -19,8 +19,8 @@ into the {body} of the default.hbs template --}}
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
                     {{#primary_tag}}
+                        <time class="post-full-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
                         <span class="date-divider">/</span> <a href="{{url}}">{{name}}</a>
                     {{/primary_tag}}
                 </section>
@@ -39,26 +39,13 @@ into the {body} of the default.hbs template --}}
             {{!-- Email subscribe form at the bottom of the page --}}
             {{#if @labs.subscribers}}
             <section class="subscribe-form">
-                <h3 class="subscribe-form-title">Subscribe to {{@blog.title}}</h3>
-                <p>Get the latest posts delivered right to your inbox</p>
+                <h3 class="subscribe-form-title">Talk to an expert today</h3>
+                <p>Learn how AI can transform your healthcare business right from your desk</p>
                 {{subscribe_form placeholder="youremail@example.com"}}
             </section>
             {{/if}}
 
-            <footer class="post-full-footer">
-
-                {{!-- There are two options for how we display the byline/author-info.
-                If the post has more than one author, we load a specific template
-                from includes/byline-multiple.hbs, otherwise, we just use the
-                default byline. --}}
-
-                {{#has author="count:>1"}}
-                    {{> "byline-multiple"}}
-                {{else}}
-                    {{> "byline-single"}}
-                {{/has}}
-
-            </footer>
+            <footer class="post-full-footer"></footer>
 
             {{!--
             <section class="post-full-comments">
