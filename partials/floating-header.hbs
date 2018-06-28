@@ -14,11 +14,10 @@
         <a class="floating-header-share-tw" data-source="https://slackbutton.herokuapp.com/embed"
             href="https://slackbutton.herokuapp.com/post/new" data-url={{url absolute="true"}}
             onclick="window.open(this.href, 'share-slack', 'width=550,height=535');return false;">
-            {{> "icons/twitter"}}
+            {{> "icons/slack"}}
         </a>
-        <a class="floating-header-share-fb" href="mailto:?subject={{encode title}}&body={{url absolute="true"}}"
-            >
-            {{> "icons/facebook"}}
+        <a class="floating-header-share-fb" href="mailto:?subject={{encode title}}&body={{url absolute="true"}}">
+            {{> "icons/email"}}
         </a>
     </div>
     <progress class="progress" value="0">

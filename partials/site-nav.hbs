@@ -1,17 +1,15 @@
 <nav class="site-nav">
     <div class="site-nav-left">
-        {{^is "home"}}
             {{#if @blog.logo}}
                 <a class="site-nav-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
             {{else}}
                 <a class="site-nav-logo" href="{{@blog.url}}">{{@blog.title}}</a>
             {{/if}}
-        {{/is}}
+    </div>
+    <div class="site-nav-right">
         {{#if @blog.navigation}}
             {{navigation}}
         {{/if}}
-    </div>
-    <div class="site-nav-right">
         <div class="social-links">
             {{#if @blog.facebook}}
                 <a class="social-link social-link-fb" href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
@@ -19,9 +17,10 @@
             {{#if @blog.twitter}}
                 <a class="social-link social-link-tw" href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
             {{/if}}
+            <a class="social-link social-link-tw" href="mailto:hello@alohamd.net">{{> "icons/email"}}</a>
         </div>
         {{#if @labs.subscribers}}
-            <a class="subscribe-button" href="#subscribe">Request a Call</a>
+            <a class="subscribe-button" href="#subscribe">Schedule a Call</a>
         {{else}}
             <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{@blog.url}}/rss/" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
         {{/if}}
